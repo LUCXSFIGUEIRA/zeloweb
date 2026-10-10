@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="Zelo">
+<title>Zelo</title>
+<rect width="320" height="320" fill="#0F5A52"/><g transform="translate(78 82) scale(2.6)"><mask id="ig" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64"><rect width="64" height="64" fill="#fff"/><path d="M22 18H42L22 38H42" fill="none" stroke="#000" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="55" cy="9" r="9.5" fill="#000"/></mask>
+<path d="M18 4H46A14 14 0 0 1 60 18V38A14 14 0 0 1 46 52H20L6.6 60.6C5.4 61.4 4 60.6 4 59.2V18A14 14 0 0 1 18 4Z" fill="#FFFFFF" mask="url(#ig)"/><circle cx="55" cy="9" r="6.5" fill="#F5B544"/></g>
+</svg>

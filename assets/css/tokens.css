@@ -1,0 +1,96 @@
+/* =========================================================
+   Zelo - design tokens
+   Fontes: carregar no <head> antes deste arquivo
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+   ========================================================= */
+
+:root {
+  /* ---------- Cores: marca ---------- */
+  --zelo-verde: #0F5A52;          /* primaria: links, titulos de destaque, botao secundario, simbolo */
+  --zelo-verde-profundo: #0A3B36; /* fundos escuros, hover do verde, wordmark */
+  --zelo-menta: #E2EFEB;          /* fundos de destaque suaves, chips, cards selecionados */
+  --zelo-menta-escura: #CFE3DE;   /* bordas sobre menta, texto claro sobre verde profundo */
+  --zelo-ambar: #F5B544;          /* CTA principal (sempre com texto --zelo-tinta) */
+  --zelo-ambar-hover: #E9A42C;
+
+  /* ---------- Cores: neutros (frios, levemente esverdeados) ---------- */
+  --zelo-tinta: #13211F;          /* texto principal */
+  --zelo-grafite: #4A5856;        /* texto secundario */
+  --zelo-nevoa: #6B7876;          /* legendas, bordas de input (>= 3:1) */
+  --zelo-linha: #C9D3D1;          /* divisorias decorativas apenas */
+  --zelo-fundo: #F4F7F6;          /* fundo de pagina */
+  --zelo-branco: #FFFFFF;         /* cards, superficies */
+
+  /* ---------- Cores: apoio ---------- */
+  --zelo-sucesso: #1D7347;
+  --zelo-sucesso-bg: #E6F4EC;
+  --zelo-alerta: #8A5300;
+  --zelo-alerta-bg: #FFF3DC;
+  --zelo-erro: #B42318;
+  --zelo-erro-bg: #FDECEA;
+
+  /* ---------- Papeis semanticos ---------- */
+  --color-bg: var(--zelo-fundo);
+  --color-surface: var(--zelo-branco);
+  --color-text: var(--zelo-tinta);
+  --color-text-muted: var(--zelo-grafite);
+  --color-brand: var(--zelo-verde);
+  --color-cta-bg: var(--zelo-ambar);
+  --color-cta-text: var(--zelo-tinta);
+  --color-focus: var(--zelo-verde);
+
+  /* ---------- Tipografia ---------- */
+  --font-display: "Outfit", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+
+  /* Escala fluida: mobile (360px) -> desktop (1280px) */
+  --text-h1: clamp(2.25rem, 1.761rem + 2.174vw, 3.5rem);      /* 36 -> 56 */
+  --text-h2: clamp(1.875rem, 1.630rem + 1.087vw, 2.5rem);     /* 30 -> 40 */
+  --text-h3: clamp(1.5rem, 1.353rem + 0.652vw, 1.875rem);     /* 24 -> 30 */
+  --text-h4: clamp(1.25rem, 1.201rem + 0.217vw, 1.375rem);    /* 20 -> 22 */
+  --text-lead: clamp(1.125rem, 1.076rem + 0.217vw, 1.25rem);  /* 18 -> 20 */
+  --text-body: clamp(1rem, 0.951rem + 0.217vw, 1.125rem);     /* 16 -> 18 */
+  --text-small: clamp(0.875rem, 0.851rem + 0.109vw, 0.9375rem); /* 14 -> 15 */
+  --text-caption: clamp(0.75rem, 0.726rem + 0.109vw, 0.8125rem); /* 12 -> 13 */
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-body: 1.6;
+  --tracking-display: -0.02em;
+
+  --weight-regular: 400;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ---------- Espacamento (base 4px) ---------- */
+  --space-1: 0.25rem;  /* 4 */
+  --space-2: 0.5rem;   /* 8 */
+  --space-3: 0.75rem;  /* 12 */
+  --space-4: 1rem;     /* 16 */
+  --space-5: 1.5rem;   /* 24 */
+  --space-6: 2rem;     /* 32 */
+  --space-7: 3rem;     /* 48 */
+  --space-8: 4rem;     /* 64 */
+  --space-9: 6rem;     /* 96 */
+  --container: 72rem;  /* 1152 */
+  --gutter: 1rem;      /* lateral minima no mobile */
+
+  /* ---------- Raios (regra: botoes = pilula, cards = 16, inputs = 10) ---------- */
+  --radius-input: 10px;
+  --radius-card: 16px;
+  --radius-pill: 999px;
+
+  /* ---------- Sombras (tingidas com o verde, nunca preto puro) ---------- */
+  --shadow-sm: 0 1px 2px rgb(10 59 54 / 0.08);
+  --shadow-md: 0 8px 24px -8px rgb(10 59 54 / 0.18);
+
+  /* ---------- Movimento ---------- */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --duration: 180ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration: 0ms; }
+}
