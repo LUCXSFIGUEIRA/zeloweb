@@ -117,8 +117,7 @@ a { color: var(--color-brand); text-underline-offset: 3px; }
 @media (min-width: 960px) {
   .hero__grid { grid-template-columns: 1fr 1fr; gap: var(--space-6); min-height: min(720px, calc(100svh - 68px - var(--space-9))); }
 }
-.hero h1 { font-size: clamp(2.5rem, 1.6rem + 3.6vw, 4.5rem); line-height: 1.04; letter-spacing: -0.035em; }
-.hero h1 > span { display: block; }
+.hero h1 { font-size: clamp(2.5rem, 1.6rem + 3.6vw, 4.5rem); line-height: 1.04; letter-spacing: -0.035em; max-width: 11ch; }
 .hero__sub { font-size: var(--text-lead); color: var(--color-text-muted); margin-top: var(--space-5); max-width: 42ch; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
 @media (max-width: 480px) { .hero__actions .btn { width: 100%; } }
@@ -143,17 +142,14 @@ a { color: var(--color-brand); text-underline-offset: 3px; }
 @keyframes drift-a { to { transform: translate(-90px, 70px) scale(1.08); } }
 @keyframes drift-b { to { transform: translate(120px, -60px) scale(0.92); } }
 
-/* Profissão que troca no título */
-.rotator { display: grid !important; justify-items: start; color: var(--color-brand); padding-bottom: 0.08em; }
-.rotator__word { grid-area: 1 / 1; position: relative; opacity: 0; transform: translateY(55%); filter: blur(6px); transition: opacity 600ms var(--ease), transform 700ms var(--ease), filter 600ms var(--ease); }
-.rotator__word.is-active { opacity: 1; transform: none; filter: none; }
-.rotator__word.is-leaving { opacity: 0; transform: translateY(-55%); filter: blur(6px); }
-.rotator__word::after {
-  content: ""; position: absolute; left: 0; right: 0; bottom: 0.02em; height: 0.12em; border-radius: 99px;
-  background: var(--zelo-ambar); transform: scaleX(0); transform-origin: left; transition: transform 600ms var(--ease) 250ms;
+/* "com zelo": o sublinhado âmbar se desenha depois que o título entra */
+.hl { position: relative; color: var(--color-brand); white-space: nowrap; }
+.hl::after {
+  content: ""; position: absolute; left: 0; right: 0.35em; bottom: 0.04em; height: 0.11em; border-radius: 99px;
+  background: var(--zelo-ambar); transform-origin: left;
 }
-.rotator__word.is-active::after { transform: scaleX(1); }
-
+.js .hl::after { transform: scaleX(0); animation: underline 900ms var(--ease) 900ms forwards; }
+@keyframes underline { to { transform: scaleX(1); } }
 /* Palco: computador + celular + agenda */
 .stage { position: relative; height: 620px; }
 .stage__desktop { position: absolute; top: 70px; right: 0; width: 76%; transform: rotate(2.5deg); }
@@ -440,7 +436,7 @@ a { color: var(--color-brand); text-underline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) {
   .js .enter, .js .reveal, .js .reveal [data-stagger] > *, .js .reveal[data-stagger] > * { opacity: 1; transform: none; filter: none; animation: none; transition: none; }
   .hero__glow::before, .hero__glow::after, .plan--featured, .timeline::after { animation: none; }
-  .rotator__word, .rotator__word::after { transition: none; }
+  .js .hl::after { animation: none; transform: none; }
   .phone__page, .phone__screen::after { animation: none; }
   .notif, .booked { animation: none; opacity: 1; transform: none; }
 }

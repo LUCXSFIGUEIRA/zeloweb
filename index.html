@@ -55,20 +55,9 @@
       <div class="hero__glow" aria-hidden="true"></div>
       <div class="container hero__grid">
         <div class="hero__copy">
-          <h1 aria-label="Sua página profissional, pronta em até 3 dias.">
-            <span class="enter" style="--d:0" aria-hidden="true">Sua página de</span>
-            <span class="rotator enter" style="--d:1" aria-hidden="true">
-              <span class="rotator__word is-active">psicóloga</span>
-              <span class="rotator__word">advogado</span>
-              <span class="rotator__word">dentista</span>
-              <span class="rotator__word">nutricionista</span>
-              <span class="rotator__word">esteticista</span>
-              <span class="rotator__word">fisioterapeuta</span>
-            </span>
-            <span class="enter" style="--d:2" aria-hidden="true">pronta em até 3&nbsp;dias.</span>
-          </h1>
-          <p class="hero__sub enter" style="--d:3">Uma página que apresenta seu trabalho e leva quem procura você direto ao seu WhatsApp. Preço fixo, a partir de R$&nbsp;297.</p>
-          <div class="hero__actions enter" style="--d:4">
+          <h1 class="enter" style="--d:0">A imagem do seu negócio, cuidada <span class="hl">com&nbsp;zelo.</span></h1>
+          <p class="hero__sub enter" style="--d:1">Criamos a página que apresenta o seu trabalho com a seriedade que ele merece e leva quem procura você direto ao seu WhatsApp.</p>
+          <div class="hero__actions enter" style="--d:2">
             <a class="btn btn--primary btn--lg" href="https://wa.me/5515996529487?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Zelo%20e%20quero%20uma%20p%C3%A1gina%20para%20o%20meu%20trabalho." target="_blank" rel="noopener">
               <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Quero minha página
             </a>
@@ -409,7 +398,6 @@
 
   <script>
     (function () {
-      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       var hasIO = 'IntersectionObserver' in window;
       var nav = document.querySelector('.nav');
       var fab = document.querySelector('.fab');
@@ -448,21 +436,6 @@
       } else {
         document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
         fab.classList.add('is-visible');
-      }
-
-      // Profissão que troca no título
-      var words = document.querySelectorAll('.rotator__word');
-      if (!reduce && words.length > 1) {
-        var current = 0;
-        setInterval(function () {
-          if (document.hidden || (typeof heroVisible !== 'undefined' && !heroVisible)) return;
-          words[current].classList.remove('is-active');
-          words[current].classList.add('is-leaving');
-          var leaving = words[current];
-          setTimeout(function () { leaving.classList.remove('is-leaving'); }, 700);
-          current = (current + 1) % words.length;
-          words[current].classList.add('is-active');
-        }, 2400);
       }
 
       document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
