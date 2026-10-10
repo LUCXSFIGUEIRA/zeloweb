@@ -39,19 +39,13 @@ e acesse `http://localhost:5173`.
 
 ## Publicação
 
-Publicado pelo GitHub Pages a partir da branch `main`. Cada push atualiza o site em cerca de 1 minuto.
+No ar em **https://www.zeloweb.com.br**, publicado pelo GitHub Pages a partir da branch `main`. Cada push atualiza o site em cerca de 1 minuto.
 
-### Domínio próprio (zeloweb.com.br)
+### Domínio (zeloweb.com.br)
 
-Depois de registrar o domínio no [registro.br](https://registro.br):
-
-1. No registro.br, em **DNS**, crie os registros:
-   - `A` para `zeloweb.com.br` apontando para `185.199.108.153`, `185.199.109.153`, `185.199.110.153` e `185.199.111.153`
-   - `CNAME` para `www` apontando para `<seu-usuario>.github.io`
-2. No GitHub, em **Settings > Pages > Custom domain**, digite `zeloweb.com.br` e salve (isso cria o arquivo `CNAME`).
-3. Quando o certificado ficar pronto, marque **Enforce HTTPS**.
-
-A propagação do DNS pode levar algumas horas.
+- DNS no [registro.br](https://registro.br): quatro registros `A` para `zeloweb.com.br` (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) e um `CNAME` de `www` para `lucxsfigueira.github.io`.
+- No GitHub, **Settings > Pages > Custom domain** está como `www.zeloweb.com.br` (arquivo `CNAME` na raiz). O endereço sem `www` redireciona para ele.
+- Não apague o arquivo `CNAME`: sem ele o domínio deixa de funcionar.
 
 ## Créditos
 
