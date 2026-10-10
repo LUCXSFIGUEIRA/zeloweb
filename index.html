@@ -51,30 +51,54 @@
   <main id="conteudo">
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
       <div class="container hero__grid">
-        <div>
-          <h1>Sua página profissional, pronta em até 3 dias.</h1>
-          <p class="hero__sub">Landing pages para profissionais da saúde, do direito e do bem-estar, com um botão que leva direto ao seu WhatsApp.</p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="https://wa.me/5515996529487?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Zelo%20e%20quero%20uma%20p%C3%A1gina%20para%20o%20meu%20trabalho." target="_blank" rel="noopener">
+        <div class="hero__copy">
+          <h1 aria-label="Sua página profissional, pronta em até 3 dias.">
+            <span class="enter" style="--d:0" aria-hidden="true">Sua página de</span>
+            <span class="rotator enter" style="--d:1" aria-hidden="true">
+              <span class="rotator__word is-active">psicóloga</span>
+              <span class="rotator__word">advogado</span>
+              <span class="rotator__word">dentista</span>
+              <span class="rotator__word">nutricionista</span>
+              <span class="rotator__word">esteticista</span>
+              <span class="rotator__word">fisioterapeuta</span>
+            </span>
+            <span class="enter" style="--d:2" aria-hidden="true">pronta em até 3&nbsp;dias.</span>
+          </h1>
+          <p class="hero__sub enter" style="--d:3">Uma página que apresenta seu trabalho e leva quem procura você direto ao seu WhatsApp. Preço fixo, a partir de R$&nbsp;297.</p>
+          <div class="hero__actions enter" style="--d:4">
+            <a class="btn btn--primary btn--lg" href="https://wa.me/5515996529487?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Zelo%20e%20quero%20uma%20p%C3%A1gina%20para%20o%20meu%20trabalho." target="_blank" rel="noopener">
               <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Quero minha página
             </a>
-            <a class="btn btn--ghost" href="#precos">Ver preços</a>
+            <a class="btn btn--ghost btn--lg" href="#exemplos">Ver exemplos <i class="ph ph-arrow-down btn__nudge" aria-hidden="true"></i></a>
           </div>
         </div>
 
-        <div class="showcase" aria-label="Exemplos de páginas feitas pela Zelo">
-          <div class="browser browser--back" aria-hidden="true">
-            <div class="browser__bar"><span class="browser__dots"><span></span><span></span><span></span></span></div>
+        <div class="stage enter" style="--d:2" role="img" aria-label="Animação: a página de uma psicóloga rolando no celular e, em seguida, chegando uma mensagem de agendamento pelo WhatsApp.">
+          <div class="browser stage__desktop" aria-hidden="true">
+            <div class="browser__bar"><span class="browser__dots"><span></span><span></span><span></span></span><span class="browser__url">rafaelmenezes.com.br</span></div>
             <img src="assets/img/exemplo-psicologo.jpg" alt="" width="1280" height="800">
           </div>
-          <div class="browser browser--front">
-            <div class="browser__bar">
-              <span class="browser__dots" aria-hidden="true"><span></span><span></span><span></span></span>
-              <span class="browser__url">marinaalbuquerque.com.br</span>
+
+          <div class="phone" aria-hidden="true">
+            <div class="phone__screen">
+              <span class="phone__island"></span>
+              <img class="phone__page" src="assets/img/exemplo-psicologa-celular.jpg" alt="" width="780" height="5200" fetchpriority="high">
+              <div class="notif">
+                <span class="notif__icon"><i class="ph-fill ph-whatsapp-logo"></i></span>
+                <span class="notif__body">
+                  <span class="notif__top"><strong>Nova mensagem</strong><small>agora</small></span>
+                  <span class="notif__text">Olá, Marina! Encontrei seu site e gostaria de agendar uma conversa.</span>
+                </span>
+              </div>
             </div>
-            <img src="assets/img/exemplo-psicologa.jpg" alt="Página de exemplo de uma psicóloga, com foto, título acolhedor e botão Agendar conversa" width="1280" height="800" fetchpriority="high">
+          </div>
+
+          <div class="booked" aria-hidden="true">
+            <span class="booked__icon"><i class="ph-bold ph-calendar-check"></i></span>
+            <span><strong>Consulta marcada</strong><small>Quinta, 14h</small></span>
           </div>
         </div>
       </div>
@@ -83,9 +107,9 @@
     <!-- FATOS -->
     <section class="facts" aria-label="Resumo da oferta">
       <div class="container">
-        <ul>
+        <ul class="reveal" data-stagger>
           <li><i class="ph ph-calendar-check" aria-hidden="true"></i>Pronta em até 3 dias</li>
-          <li><i class="ph ph-tag" aria-hidden="true"></i>Preço fixo a partir de R$ 297</li>
+          <li><i class="ph ph-gift" aria-hidden="true"></i>Domínio .com.br de brinde</li>
           <li><i class="ph ph-scales" aria-hidden="true"></i>Textos dentro das regras do seu conselho</li>
         </ul>
       </div>
@@ -102,7 +126,7 @@
         <div class="compare">
           <div class="compare__col compare__col--before reveal">
             <h3><i class="ph ph-instagram-logo" aria-hidden="true"></i> Só com o perfil</h3>
-            <ul>
+            <ul data-stagger>
               <li><i class="ph ph-x" aria-hidden="true"></i><span>Informações espalhadas entre posts e destaques.</span></li>
               <li><i class="ph ph-x" aria-hidden="true"></i><span>A pessoa precisa perguntar tudo no direct antes de decidir.</span></li>
               <li><i class="ph ph-x" aria-hidden="true"></i><span>Um link na bio que não explica o seu trabalho.</span></li>
@@ -111,7 +135,7 @@
           </div>
           <div class="compare__col compare__col--after reveal">
             <h3><img src="assets/logo/zelo-horizontal-mono-claro.svg" alt="Com a Zelo" width="101" height="26"></h3>
-            <ul>
+            <ul data-stagger>
               <li><i class="ph-bold ph-check" aria-hidden="true"></i><span>Quem você é, como atende e onde fica, tudo em uma página.</span></li>
               <li><i class="ph-bold ph-check" aria-hidden="true"></i><span>Botão de WhatsApp com a mensagem de agendamento já escrita.</span></li>
               <li><i class="ph-bold ph-check" aria-hidden="true"></i><span>Um endereço próprio para a bio, o cartão e a assinatura de e&#8209;mail.</span></li>
@@ -130,7 +154,7 @@
           <p>Modelos com profissionais fictícios, em estilos diferentes. A sua é feita do zero, com as suas cores, fotos e jeito de falar.</p>
         </header>
 
-        <div class="examples">
+        <div class="examples" data-stagger>
           <article class="example reveal">
             <a class="example__link" href="https://lucxsfigueira.github.io/landing-psicologos/psicologa/" target="_blank" rel="noopener">
               <figure>
@@ -177,7 +201,7 @@
           <h2>O que vem na sua página.</h2>
         </header>
 
-        <div class="bento">
+        <div class="bento" data-stagger>
           <article class="tile tile--wide tile--brand reveal">
             <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             <h3>Um toque e a conversa já começa.</h3>
@@ -267,7 +291,7 @@
           <p>Pagamento único pela página. Sem taxa escondida e sem surpresa no final.</p>
         </header>
 
-        <div class="plans">
+        <div class="plans" data-stagger>
           <article class="plan reveal">
             <div>
               <h3>Página</h3>
@@ -385,27 +409,60 @@
 
   <script>
     (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var hasIO = 'IntersectionObserver' in window;
       var nav = document.querySelector('.nav');
       var fab = document.querySelector('.fab');
-      var hero = document.querySelector('.hero');
-      function onScroll() {
-        var y = window.scrollY;
-        nav.classList.toggle('is-scrolled', y > 8);
-        fab.classList.toggle('is-visible', y > hero.offsetHeight * 0.8);
-      }
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
+      var hero = document.getElementById('hero');
+      var stage = document.querySelector('.stage');
 
-      var items = document.querySelectorAll('.reveal');
-      if ('IntersectionObserver' in window) {
+      // Ordem de entrada dos itens dentro de grupos (--i)
+      document.querySelectorAll('[data-stagger]').forEach(function (group) {
+        Array.prototype.forEach.call(group.children, function (el, i) { el.style.setProperty('--i', i); });
+      });
+
+      if (hasIO) {
+        // Borda da navegação ao sair do topo
+        var sentinel = document.createElement('div');
+        sentinel.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:8px;pointer-events:none';
+        document.body.prepend(sentinel);
+        new IntersectionObserver(function (e) {
+          nav.classList.toggle('is-scrolled', !e[0].isIntersecting);
+        }).observe(sentinel);
+
+        // Botão flutuante aparece depois do hero; animação do celular pausa fora da tela
+        var heroVisible = true;
+        new IntersectionObserver(function (e) {
+          heroVisible = e[0].isIntersecting;
+          fab.classList.toggle('is-visible', !heroVisible);
+          stage.classList.toggle('is-paused', !heroVisible);
+        }, { threshold: 0.15 }).observe(hero);
+
+        // Revelação ao rolar
         var io = new IntersectionObserver(function (entries) {
           entries.forEach(function (e) {
             if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
           });
-        }, { rootMargin: '0px 0px -8% 0px' });
-        items.forEach(function (el) { io.observe(el); });
+        }, { rootMargin: '0px 0px -10% 0px' });
+        document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
       } else {
-        items.forEach(function (el) { el.classList.add('is-in'); });
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
+        fab.classList.add('is-visible');
+      }
+
+      // Profissão que troca no título
+      var words = document.querySelectorAll('.rotator__word');
+      if (!reduce && words.length > 1) {
+        var current = 0;
+        setInterval(function () {
+          if (document.hidden || (typeof heroVisible !== 'undefined' && !heroVisible)) return;
+          words[current].classList.remove('is-active');
+          words[current].classList.add('is-leaving');
+          var leaving = words[current];
+          setTimeout(function () { leaving.classList.remove('is-leaving'); }, 700);
+          current = (current + 1) % words.length;
+          words[current].classList.add('is-active');
+        }, 2400);
       }
 
       document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
