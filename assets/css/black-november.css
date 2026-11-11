@@ -165,7 +165,12 @@
 .plan__deadline { display: flex; align-items: center; gap: 8px; font-size: var(--text-small); color: var(--color-text-muted); }
 .plan__deadline i { color: var(--zelo-ambar); font-size: 18px; }
 .plan__deadline b { color: var(--bn-texto); font-variant-numeric: tabular-nums; }
-.upkeep__opt { display: inline-block; margin-left: 8px; vertical-align: middle; font-family: var(--font-body); font-size: var(--text-caption); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-text-muted); border: 1px solid var(--bn-linha); border-radius: var(--radius-pill); padding: 1px 10px; }
+.plan--gifts { background: var(--bn-carvao); justify-content: flex-start; }
+.gifts__icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; background: var(--zelo-ambar); color: var(--zelo-tinta); font-size: 28px; margin-bottom: var(--space-4); }
+.gift { display: grid; grid-template-columns: 44px 1fr; gap: var(--space-4); padding: var(--space-5); border-radius: var(--radius-card); background: var(--bn-preto); border: 1px dashed rgb(245 181 68 / 0.4); }
+.gift > i { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: rgb(245 181 68 / 0.12); color: var(--zelo-ambar); font-size: 24px; }
+.gift h4 { font-size: var(--text-body); font-weight: 600; }
+.gift p { color: var(--color-text-muted); font-size: var(--text-small); margin-top: 4px; }
 
 /* ---------- CTA final ---------- */
 .final__card { background: radial-gradient(120% 140% at 100% 100%, #2A2010 0%, #121110 55%); border: 1px solid rgb(245 181 68 / 0.3); }
